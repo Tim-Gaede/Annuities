@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 function annuityAPR(ratio::Float64, numPayouts::Int)
-    if ratio < 0.0
-        msg = "The money multiplication (ratio) must be at least zero."
+    if ratio < 1.0
+        msg = "The money multiplication (ratio) must be at least one."
         throw(DomainError(msg))
     end
 
@@ -52,8 +52,8 @@ end
 #-------------------------------------------------------------------------------
 # equivalent single payout
 function annuityRatio(APR::Float64, numPayouts::Int)
-    if APR < -100.0
-        throw(DomainError("interest cannot be less than -100%"))
+    if APR < 0.0
+        throw(DomainError("Annual Percentage Rate (APR) cannot be negative."))
     end
 
     if numPayouts < 2
