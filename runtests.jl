@@ -10,7 +10,7 @@ println("\n")
 end
 println("\n")
 
-@testset "7.5% interest over 10 payments............." begin
+@testset "7.5% interest over 10 payments.............." begin
     @test annuityRatio(7.5, 10) ≈ 1.4147087495529487
 end
 println("\n")
@@ -21,7 +21,7 @@ println("\n")
 end
 println("\n")
 
-@testset "Negative interest throws DomainError......." begin
+@testset "Negative interest throws DomainError........" begin
     @test_throws DomainError annuityRatio(-2.0, 25)
 end
 println("\n")
