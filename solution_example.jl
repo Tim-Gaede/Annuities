@@ -62,7 +62,7 @@ function annuityRatio(APR::Float64, numPayouts::Int)
 
     res = 0.0
     payout = 1 / numPayouts
-    multiplier = 1.0 + APR / 100
+    multiplier = 1.0 + APR/100
     for t = 0 : numPayouts - 1
         res += payout * multiplier^t
     end
