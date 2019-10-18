@@ -10,7 +10,7 @@ function annuityAPR(ratio::Float64, numPayouts::Int)
     end
 
 
-    # Use Newton-Raphson method to approach the correct APR
+    # Use Newton-Raphson method to converge on the correct APR
 
     # First APR guess
     APR_prev = 0.0 # lower limit
